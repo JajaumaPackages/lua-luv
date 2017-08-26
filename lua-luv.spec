@@ -2,8 +2,8 @@
 # for compiled modules
 %global lualibdir %{_libdir}/lua/%{luaver}
 
-%define vermagic1 1.9.0
-%define vermagic2 3
+%define vermagic1 1.9.1
+%define vermagic2 1
 
 Name:           lua-luv
 Version:        %{vermagic1}_%{vermagic2}
@@ -11,7 +11,7 @@ Release:        1%{?dist}
 Summary:        Bare libuv bindings for lua
 
 License:        Apache 2.0
-URL:            https://luarocks.org/modules/tarruda/mpack
+URL:            https://github.com/luvit/luv
 Source0:        https://github.com/luvit/luv/releases/download/%{vermagic1}-%{vermagic2}/luv-%{vermagic1}-%{vermagic2}.tar.gz
 
 BuildRequires:  cmake >= 2.8
@@ -63,5 +63,9 @@ popd
 
 
 %changelog
+* Sun Aug 27 2017 Jajauma's Packages <jajauma@yandex.ru> - 1.9.1_1-1
+- Update to latest upstream release
+- Fix project URL
+
 * Sat Jun 04 2016 Jajauma's Packages <jajauma@yandex.ru> - 1.9.0_3-1
 - Public release
